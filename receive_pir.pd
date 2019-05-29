@@ -1,0 +1,78 @@
+#N canvas 97 480 865 640 10;
+#X declare -lib mrpeach;
+#X obj 27 22 import mrpeach;
+#X obj 330 78 udpreceive 5555;
+#X obj 272 144 print;
+#X floatatom 66 223 5 0 0 0 - - -;
+#X obj 331 145 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X floatatom 114 224 5 0 0 0 - - -;
+#X floatatom 157 224 5 0 0 0 - - -;
+#X floatatom 198 224 5 0 0 0 - - -;
+#X floatatom 239 225 5 0 0 0 - - -;
+#X floatatom 280 225 5 0 0 0 - - -;
+#X floatatom 318 225 5 0 0 0 - - -;
+#X floatatom 355 226 5 0 0 0 - - -;
+#X floatatom 393 226 5 0 0 0 - - -;
+#X floatatom 433 227 5 0 0 0 - - -;
+#X floatatom 473 226 5 0 0 0 - - -;
+#X floatatom 514 226 5 0 0 0 - - -;
+#X floatatom 552 226 5 0 0 0 - - -;
+#X floatatom 589 227 5 0 0 0 - - -;
+#X floatatom 627 227 5 0 0 0 - - -;
+#X floatatom 667 228 5 0 0 0 - - -;
+#X obj 41 299 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 41 331 \; pd dsp \$1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array oscil 100 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 577 408 graph;
+#X obj 127 426 osc~ 440;
+#X obj 196 502 env~;
+#X obj 128 476 *~;
+#X obj 322 423 vsl 15 50 0 0.5 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 196 541 - 100;
+#X obj 197 590 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 66 528 dac~ 1 2;
+#X obj 298 272 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 298 323 sel 0 1;
+#X msg 347 366 0.4;
+#X msg 279 366 0;
+#X connect 1 0 2 0;
+#X connect 1 0 4 0;
+#X connect 4 0 3 0;
+#X connect 4 1 5 0;
+#X connect 4 2 6 0;
+#X connect 4 3 7 0;
+#X connect 4 4 8 0;
+#X connect 4 5 9 0;
+#X connect 4 6 10 0;
+#X connect 4 7 11 0;
+#X connect 4 8 12 0;
+#X connect 4 9 13 0;
+#X connect 4 10 14 0;
+#X connect 4 11 15 0;
+#X connect 4 12 16 0;
+#X connect 4 13 17 0;
+#X connect 4 14 18 0;
+#X connect 4 15 19 0;
+#X connect 19 0 30 0;
+#X connect 20 0 21 0;
+#X connect 23 0 25 0;
+#X connect 24 0 27 0;
+#X connect 25 0 24 0;
+#X connect 25 0 29 0;
+#X connect 25 0 29 1;
+#X connect 26 0 25 1;
+#X connect 27 0 28 0;
+#X connect 30 0 31 0;
+#X connect 31 0 33 0;
+#X connect 31 1 32 0;
+#X connect 32 0 26 0;
+#X connect 33 0 26 0;
